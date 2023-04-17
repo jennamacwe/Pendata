@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Naive Bayes &#8212; Science of Data</title>
+    <title>UTS-PENDATA &#8212; Science of Data</title>
   
   
   
@@ -63,8 +63,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'PENDATA-UTS';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tugas-Pendata-Mengumpulkan data dari beberapa database" href="Tugas%20Pendata-Get%20Data.html" />
-    <link rel="prev" title="NAIVE BAYES" href="Naive--Bayes.html" />
+    <link rel="prev" title="Tugas-Pendata-DecisionTree" href="Tugas%20Pendata-DecisionTree.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -158,8 +157,6 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Naive--Bayes.html">NAIVE BAYES</a></li>
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Naive Bayes</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="Tugas%20Pendata-Get%20Data.html">Tugas-Pendata-Mengumpulkan data dari beberapa database</a></li>
 
 
@@ -167,6 +164,9 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l1"><a class="reference internal" href="Tugas%20Pendata-Eksplorasi%20data.html">Tugas-Pendata-Eksplorasi data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas%20Pendata-DecisionTree.html">Tugas-Pendata-DecisionTree</a></li>
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">UTS-PENDATA</a></li>
+
 
 </ul>
 
@@ -351,7 +351,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Naive Bayes</h1>
+    <h1>UTS-PENDATA</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -361,7 +361,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Naive Bayes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">UTS-PENDATA</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#naive-bayes">Naive Bayes</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#knn">KNN</a></li>
 </ul>
 
@@ -375,7 +376,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="naive-bayes">
+  <div class="tex2jax_ignore mathjax_ignore section" id="uts-pendata">
+<h1>UTS-PENDATA<a class="headerlink" href="#uts-pendata" title="Permalink to this heading">#</a></h1>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="naive-bayes">
 <h1>Naive Bayes<a class="headerlink" href="#naive-bayes" title="Permalink to this heading">#</a></h1>
 <p><strong>library</strong></p>
 <div class="cell docutils container">
@@ -398,7 +402,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-802b5722-31c0-4af3-8613-d37a98c00c7a">
+  <div id="df-b58d8c7f-b90e-4a59-9c3b-5b28c67e08ef">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -499,7 +503,7 @@ document.write(`
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-802b5722-31c0-4af3-8613-d37a98c00c7a')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-b58d8c7f-b90e-4a59-9c3b-5b28c67e08ef')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -550,12 +554,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-802b5722-31c0-4af3-8613-d37a98c00c7a button.colab-df-convert');
+          document.querySelector('#df-b58d8c7f-b90e-4a59-9c3b-5b28c67e08ef button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-802b5722-31c0-4af3-8613-d37a98c00c7a');
+          const element = document.querySelector('#df-b58d8c7f-b90e-4a59-9c3b-5b28c67e08ef');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -707,9 +711,9 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-     <input type="file" id="files-ca066b43-6c89-4ff8-9f3c-8de1f85aff7a" name="files[]" multiple disabled
+     <input type="file" id="files-1d67b43c-ee30-4cab-9dbc-2eb3fb26057b" name="files[]" multiple disabled
         style="border:none" />
-     <output id="result-ca066b43-6c89-4ff8-9f3c-8de1f85aff7a">
+     <output id="result-1d67b43c-ee30-4cab-9dbc-2eb3fb26057b">
       Upload widget is only available when the cell has been executed in the
       current browser session. Please rerun this cell to enable.
       </output>
@@ -1807,22 +1811,13 @@ Accuracy: 0.7272727272727273
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Naive--Bayes.html"
+       href="Tugas%20Pendata-DecisionTree.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">NAIVE BAYES</p>
+        <p class="prev-next-title">Tugas-Pendata-DecisionTree</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="Tugas%20Pendata-Get%20Data.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tugas-Pendata-Mengumpulkan data dari beberapa database</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div></div>
   
@@ -1842,7 +1837,8 @@ Accuracy: 0.7272727272727273
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Naive Bayes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">UTS-PENDATA</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#naive-bayes">Naive Bayes</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#knn">KNN</a></li>
 </ul>
 
