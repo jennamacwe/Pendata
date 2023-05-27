@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Tugas-Pendata-DecisionTree" href="Tugas%20Pendata-DecisionTree.html" />
-    <link rel="prev" title="Tugas-Pendata-Mengumpulkan data dari beberapa database" href="Tugas%20Pendata-Get%20Data.html" />
+    <link rel="prev" title="Tugas-Pendata-Database" href="Tugas%20Pendata-Get%20Data.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -158,7 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Naive--Bayes.html">NAIVE BAYES</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="Tugas%20Pendata-Get%20Data.html">Tugas-Pendata-Mengumpulkan data dari beberapa database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas%20Pendata-Get%20Data.html">Tugas-Pendata-Database</a></li>
 
 
 
@@ -375,7 +375,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: psycopg2 in /usr/local/lib/python3.9/dist-packages (2.9.6)
+Requirement already satisfied: psycopg2 in /usr/local/lib/python3.10/dist-packages (2.9.6)
 </pre></div>
 </div>
 </div>
@@ -388,11 +388,11 @@ Requirement already satisfied: psycopg2 in /usr/local/lib/python3.9/dist-package
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: pandas in /usr/local/lib/python3.9/dist-packages (1.5.3)
-Requirement already satisfied: python-dateutil&gt;=2.8.1 in /usr/local/lib/python3.9/dist-packages (from pandas) (2.8.2)
-Requirement already satisfied: numpy&gt;=1.20.3 in /usr/local/lib/python3.9/dist-packages (from pandas) (1.22.4)
-Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.9/dist-packages (from pandas) (2022.7.1)
-Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.9/dist-packages (from python-dateutil&gt;=2.8.1-&gt;pandas) (1.16.0)
+Requirement already satisfied: pandas in /usr/local/lib/python3.10/dist-packages (1.5.3)
+Requirement already satisfied: python-dateutil&gt;=2.8.1 in /usr/local/lib/python3.10/dist-packages (from pandas) (2.8.2)
+Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas) (2022.7.1)
+Requirement already satisfied: numpy&gt;=1.21.0 in /usr/local/lib/python3.10/dist-packages (from pandas) (1.22.4)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil&gt;=2.8.1-&gt;pandas) (1.16.0)
 </pre></div>
 </div>
 </div>
@@ -479,7 +479,7 @@ could not connect to server: Cannot assign requested address
 <span class="ne">---&gt; </span><span class="mi">16</span>         <span class="n">conn</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="o">**</span><span class="n">params_dic</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">17</span>     <span class="k">except</span> <span class="p">(</span><span class="ne">Exception</span><span class="p">,</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">DatabaseError</span><span class="p">)</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/psycopg2/__init__.py</span> in <span class="ni">connect</span><span class="nt">(dsn, connection_factory, cursor_factory, **kwargs)</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/psycopg2/__init__.py</span> in <span class="ni">connect</span><span class="nt">(dsn, connection_factory, cursor_factory, **kwargs)</span>
 <span class="g g-Whitespace">    </span><span class="mi">121</span>     <span class="n">dsn</span> <span class="o">=</span> <span class="n">_ext</span><span class="o">.</span><span class="n">make_dsn</span><span class="p">(</span><span class="n">dsn</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 <span class="ne">--&gt; </span><span class="mi">122</span>     <span class="n">conn</span> <span class="o">=</span> <span class="n">_connect</span><span class="p">(</span><span class="n">dsn</span><span class="p">,</span> <span class="n">connection_factory</span><span class="o">=</span><span class="n">connection_factory</span><span class="p">,</span> <span class="o">**</span><span class="n">kwasync</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">123</span>     <span class="k">if</span> <span class="n">cursor_factory</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -553,7 +553,7 @@ could not connect to server: Cannot assign requested address
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Tugas-Pendata-Mengumpulkan data dari beberapa database</p>
+        <p class="prev-next-title">Tugas-Pendata-Database</p>
       </div>
     </a>
     <a class="right-next"
