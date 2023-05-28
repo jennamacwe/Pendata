@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Identitas &#8212; Science of Data</title>
+    <title>Tugas Pendata - Menghitung manual Backpropagation &#8212; Science of Data</title>
   
   
   
@@ -60,10 +60,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Backpropagation';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="NAIVE BAYES" href="Naive--Bayes.html" />
+    <link rel="next" title="Tugas Pendata-Implementasikan SklearnPCA pada data iris" href="sklearnPCA.html" />
+    <link rel="prev" title="UTS-PENDATA" href="PENDATA-UTS.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -129,7 +130,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -142,13 +143,13 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Identitas
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Naive--Bayes.html">NAIVE BAYES</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="Tugas%20Pendata-Get%20Data.html">Tugas-Pendata-Database</a></li>
@@ -162,7 +163,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="PENDATA-UTS.html">UTS-PENDATA</a></li>
 
 
-<li class="toctree-l1"><a class="reference internal" href="Backpropagation.html">Tugas Pendata - Menghitung manual Backpropagation</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas Pendata - Menghitung manual Backpropagation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sklearnPCA.html">Tugas Pendata-Implementasikan SklearnPCA pada data iris</a></li>
 
 
@@ -243,7 +244,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FBackpropagation.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -273,7 +274,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/Backpropagation.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -283,7 +284,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -353,7 +354,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Identitas</h1>
+    <h1>Tugas Pendata - Menghitung manual Backpropagation</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -367,25 +368,161 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="identitas">
-<h1>Identitas<a class="headerlink" href="#identitas" title="Permalink to this heading">#</a></h1>
-<!--This is a small sample book to give you a feel for how book content is-->
-<!--structured.-->
-<!--:::{note}-->
-<!--Here is a note!-->
-<!--:::-->
-<!--And here is a code block:-->
-<!--```-->
-<!--e = mc^2-->
-<!--```-->
-<!--Check out the content pages bundled with this sample book to see more.-->
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Nama : Jennatul Macwe
-NIM  : 210411100151</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="tugas-pendata-menghitung-manual-backpropagation">
+<h1>Tugas Pendata - Menghitung manual Backpropagation<a class="headerlink" href="#tugas-pendata-menghitung-manual-backpropagation" title="Permalink to this heading">#</a></h1>
+<p>Data Mahasiswa :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/jennamacwe/Pendata/main/Backpropagation.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
 </div>
-<div class="toctree-wrapper compound">
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-835aa539-2d49-45b3-970b-5603c6a2c8dc">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>NO</th>
+      <th>NAMA</th>
+      <th>IPK</th>
+      <th>JUMLAH SKS</th>
+      <th>Lulus Tepat Waktu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Aldi</td>
+      <td>3.8</td>
+      <td>120</td>
+      <td>Ya</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Camelia</td>
+      <td>2.9</td>
+      <td>90</td>
+      <td>Tidak</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Rana</td>
+      <td>3.9</td>
+      <td>144</td>
+      <td>Ya</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Dinda</td>
+      <td>1.5</td>
+      <td>70</td>
+      <td>Tidak</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-835aa539-2d49-45b3-970b-5603c6a2c8dc')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-835aa539-2d49-45b3-970b-5603c6a2c8dc button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-835aa539-2d49-45b3-970b-5603c6a2c8dc');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  </div></div>
+</div>
+<p>Proses Perhitungan Manual Backpropagation :</p>
+<p><a class="reference external" href="https://docs.google.com/spreadsheets/d/1rHRF4LHFKcIdb1KPmEuOhqHZxidtX2ucZlWsRgppAHg/edit?usp=sharing">Perhitungan Manual Backpropagation (spreadsheets)</a></p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -419,12 +556,21 @@ NIM  : 210411100151</p>
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="PENDATA-UTS.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">UTS-PENDATA</p>
+      </div>
+    </a>
     <a class="right-next"
-       href="Naive--Bayes.html"
+       href="sklearnPCA.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">NAIVE BAYES</p>
+        <p class="prev-next-title">Tugas Pendata-Implementasikan SklearnPCA pada data iris</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
