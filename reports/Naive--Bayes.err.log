@@ -1,0 +1,79 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
+    return loop.run_until_complete(inner)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from sklearn.naive_bayes import GaussianNB
+modelnb = GaussianNB()
+nbtrain =modelnb.fit(x,y)
+Y_predict = nbtrain.predict(x_test)
+print("prediksi :", Y_predict)
+------------------
+
+
+[0;31m[0m
+[0;31mValueError[0mTraceback (most recent call last)
+[0;32m<ipython-input-9-4bda88a572c6>[0m in [0;36m<cell line: 3>[0;34m()[0m
+[1;32m      1[0m [0;32mfrom[0m [0msklearn[0m[0;34m.[0m[0mnaive_bayes[0m [0;32mimport[0m [0mGaussianNB[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      2[0m [0mmodelnb[0m [0;34m=[0m [0mGaussianNB[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 3[0;31m [0mnbtrain[0m [0;34m=[0m[0mmodelnb[0m[0;34m.[0m[0mfit[0m[0;34m([0m[0mx[0m[0;34m,[0m[0my[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      4[0m [0mY_predict[0m [0;34m=[0m [0mnbtrain[0m[0;34m.[0m[0mpredict[0m[0;34m([0m[0mx_test[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0mprint[0m[0;34m([0m[0;34m"prediksi :"[0m[0;34m,[0m [0mY_predict[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/sklearn/naive_bayes.py[0m in [0;36mfit[0;34m(self, X, y, sample_weight)[0m
+[1;32m    265[0m         [0mself[0m[0;34m.[0m[0m_validate_params[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    266[0m         [0my[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_validate_data[0m[0;34m([0m[0my[0m[0;34m=[0m[0my[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 267[0;31m         return self._partial_fit(
+[0m[1;32m    268[0m             [0mX[0m[0;34m,[0m [0my[0m[0;34m,[0m [0mnp[0m[0;34m.[0m[0munique[0m[0;34m([0m[0my[0m[0;34m)[0m[0;34m,[0m [0m_refit[0m[0;34m=[0m[0;32mTrue[0m[0;34m,[0m [0msample_weight[0m[0;34m=[0m[0msample_weight[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    269[0m         )
+
+[0;32m/usr/local/lib/python3.10/dist-packages/sklearn/naive_bayes.py[0m in [0;36m_partial_fit[0;34m(self, X, y, classes, _refit, sample_weight)[0m
+[1;32m    426[0m [0;34m[0m[0m
+[1;32m    427[0m         [0mfirst_call[0m [0;34m=[0m [0m_check_partial_fit_first_call[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mclasses[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 428[0;31m         [0mX[0m[0;34m,[0m [0my[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_validate_data[0m[0;34m([0m[0mX[0m[0;34m,[0m [0my[0m[0;34m,[0m [0mreset[0m[0;34m=[0m[0mfirst_call[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    429[0m         [0;32mif[0m [0msample_weight[0m [0;32mis[0m [0;32mnot[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    430[0m             [0msample_weight[0m [0;34m=[0m [0m_check_sample_weight[0m[0;34m([0m[0msample_weight[0m[0;34m,[0m [0mX[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/sklearn/base.py[0m in [0;36m_validate_data[0;34m(self, X, y, reset, validate_separately, **check_params)[0m
+[1;32m    582[0m                 [0my[0m [0;34m=[0m [0mcheck_array[0m[0;34m([0m[0my[0m[0;34m,[0m [0minput_name[0m[0;34m=[0m[0;34m"y"[0m[0;34m,[0m [0;34m**[0m[0mcheck_y_params[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    583[0m             [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 584[0;31m                 [0mX[0m[0;34m,[0m [0my[0m [0;34m=[0m [0mcheck_X_y[0m[0;34m([0m[0mX[0m[0;34m,[0m [0my[0m[0;34m,[0m [0;34m**[0m[0mcheck_params[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    585[0m             [0mout[0m [0;34m=[0m [0mX[0m[0;34m,[0m [0my[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    586[0m [0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/sklearn/utils/validation.py[0m in [0;36mcheck_X_y[0;34m(X, y, accept_sparse, accept_large_sparse, dtype, order, copy, force_all_finite, ensure_2d, allow_nd, multi_output, ensure_min_samples, ensure_min_features, y_numeric, estimator)[0m
+[1;32m   1104[0m         )
+[1;32m   1105[0m [0;34m[0m[0m
+[0;32m-> 1106[0;31m     X = check_array(
+[0m[1;32m   1107[0m         [0mX[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1108[0m         [0maccept_sparse[0m[0;34m=[0m[0maccept_sparse[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/sklearn/utils/validation.py[0m in [0;36mcheck_array[0;34m(array, accept_sparse, accept_large_sparse, dtype, order, copy, force_all_finite, ensure_2d, allow_nd, ensure_min_samples, ensure_min_features, estimator, input_name)[0m
+[1;32m    919[0m [0;34m[0m[0m
+[1;32m    920[0m         [0;32mif[0m [0mforce_all_finite[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 921[0;31m             _assert_all_finite(
+[0m[1;32m    922[0m                 [0marray[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    923[0m                 [0minput_name[0m[0;34m=[0m[0minput_name[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/sklearn/utils/validation.py[0m in [0;36m_assert_all_finite[0;34m(X, allow_nan, msg_dtype, estimator_name, input_name)[0m
+[1;32m    159[0m                 [0;34m"#estimators-that-handle-nan-values"[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    160[0m             )
+[0;32m--> 161[0;31m         [0;32mraise[0m [0mValueError[0m[0;34m([0m[0mmsg_err[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    162[0m [0;34m[0m[0m
+[1;32m    163[0m [0;34m[0m[0m
+
+[0;31mValueError[0m: Input X contains NaN.
+GaussianNB does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+

@@ -402,14 +402,14 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/datasets/breast-cancer/master/data/breast-cancer.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/jennamacwe/Pendata/main/breast-cancer.csv&#39;</span><span class="p">)</span>
 <span class="n">dataset</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-9c42338a-ac61-48e2-a034-180e058ebfd9">
+  <div id="df-9209943f-cbe0-4538-b45d-1c396b025abe">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -439,6 +439,7 @@ document.write(`
       <th>breast-quad</th>
       <th>irradiat</th>
       <th>class</th>
+      <th>Unnamed: 10</th>
     </tr>
   </thead>
   <tbody>
@@ -454,6 +455,7 @@ document.write(`
       <td>left_up</td>
       <td>False</td>
       <td>recurrence-events</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>1</th>
@@ -467,6 +469,7 @@ document.write(`
       <td>central</td>
       <td>False</td>
       <td>false-recurrence-events</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>2</th>
@@ -480,6 +483,7 @@ document.write(`
       <td>left_low</td>
       <td>False</td>
       <td>recurrence-events</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>3</th>
@@ -493,24 +497,26 @@ document.write(`
       <td>left_low</td>
       <td>True</td>
       <td>false-recurrence-events</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>4</th>
       <td>40-49</td>
       <td>premefalse</td>
       <td>30-34</td>
-      <td>3-5</td>
+      <td>5-Mar</td>
       <td>True</td>
       <td>2</td>
       <td>left</td>
       <td>right_up</td>
       <td>False</td>
       <td>recurrence-events</td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-9c42338a-ac61-48e2-a034-180e058ebfd9')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-9209943f-cbe0-4538-b45d-1c396b025abe')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -561,12 +567,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-9c42338a-ac61-48e2-a034-180e058ebfd9 button.colab-df-convert');
+          document.querySelector('#df-9209943f-cbe0-4538-b45d-1c396b025abe button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-9c42338a-ac61-48e2-a034-180e058ebfd9');
+          const element = document.querySelector('#df-9209943f-cbe0-4538-b45d-1c396b025abe');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -613,7 +619,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-0cdfe996-5615-49c0-8085-0cd06e63df6c">
+  <div id="df-79cc4be9-c22f-46d0-b026-2e70d72c3a91">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -642,6 +648,7 @@ document.write(`
       <th>breast</th>
       <th>irradiat</th>
       <th>class</th>
+      <th>Unnamed: 10</th>
     </tr>
   </thead>
   <tbody>
@@ -656,6 +663,7 @@ document.write(`
       <td>1</td>
       <td>0</td>
       <td>1</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>1</th>
@@ -668,6 +676,7 @@ document.write(`
       <td>1</td>
       <td>0</td>
       <td>0</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>2</th>
@@ -680,6 +689,7 @@ document.write(`
       <td>0</td>
       <td>0</td>
       <td>1</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>3</th>
@@ -692,30 +702,33 @@ document.write(`
       <td>1</td>
       <td>1</td>
       <td>0</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>4</th>
       <td>2</td>
       <td>2</td>
       <td>5</td>
-      <td>4</td>
+      <td>5</td>
       <td>1</td>
       <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>1</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>5</th>
       <td>3</td>
       <td>2</td>
       <td>4</td>
-      <td>4</td>
+      <td>5</td>
       <td>0</td>
       <td>1</td>
       <td>1</td>
       <td>1</td>
       <td>0</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>6</th>
@@ -728,6 +741,7 @@ document.write(`
       <td>0</td>
       <td>0</td>
       <td>0</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>7</th>
@@ -740,6 +754,7 @@ document.write(`
       <td>0</td>
       <td>0</td>
       <td>0</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>8</th>
@@ -752,23 +767,25 @@ document.write(`
       <td>1</td>
       <td>0</td>
       <td>0</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>9</th>
       <td>2</td>
       <td>0</td>
       <td>7</td>
-      <td>2</td>
+      <td>3</td>
       <td>1</td>
       <td>1</td>
       <td>1</td>
       <td>1</td>
       <td>0</td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-0cdfe996-5615-49c0-8085-0cd06e63df6c')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-79cc4be9-c22f-46d0-b026-2e70d72c3a91')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -819,12 +836,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-0cdfe996-5615-49c0-8085-0cd06e63df6c button.colab-df-convert');
+          document.querySelector('#df-79cc4be9-c22f-46d0-b026-2e70d72c3a91 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-0cdfe996-5615-49c0-8085-0cd06e63df6c');
+          const element = document.querySelector('#df-79cc4be9-c22f-46d0-b026-2e70d72c3a91');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -854,20 +871,21 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
 RangeIndex: 272 entries, 0 to 271
-Data columns (total 9 columns):
- #   Column        Non-Null Count  Dtype
----  ------        --------------  -----
- 0   age           272 non-null    int64
- 1   mefalsepause  272 non-null    int64
- 2   tumor-size    272 non-null    int64
- 3   inv-falsedes  272 non-null    int64
- 4   falsede-caps  272 non-null    int64
- 5   deg-malig     272 non-null    int64
- 6   breast        272 non-null    int64
- 7   irradiat      272 non-null    int64
- 8   class         272 non-null    int64
-dtypes: int64(9)
-memory usage: 19.2 KB
+Data columns (total 10 columns):
+ #   Column        Non-Null Count  Dtype  
+---  ------        --------------  -----  
+ 0   age           272 non-null    int64  
+ 1   mefalsepause  272 non-null    int64  
+ 2   tumor-size    272 non-null    int64  
+ 3   inv-falsedes  272 non-null    int64  
+ 4   falsede-caps  272 non-null    int64  
+ 5   deg-malig     272 non-null    int64  
+ 6   breast        272 non-null    int64  
+ 7   irradiat      272 non-null    int64  
+ 8   class         272 non-null    int64  
+ 9   Unnamed: 10   0 non-null      float64
+dtypes: float64(1), int64(9)
+memory usage: 21.4 KB
 </pre></div>
 </div>
 </div>
@@ -881,7 +899,7 @@ memory usage: 19.2 KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-1c569a53-0947-427c-abeb-43e5406ea858">
+  <div id="df-2714db75-c590-4200-be01-8b4b4aa7574e">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -909,6 +927,7 @@ memory usage: 19.2 KB
       <th>deg-malig</th>
       <th>breast</th>
       <th>irradiat</th>
+      <th>Unnamed: 10</th>
     </tr>
   </thead>
   <tbody>
@@ -922,6 +941,7 @@ memory usage: 19.2 KB
       <td>2</td>
       <td>1</td>
       <td>0</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>1</th>
@@ -933,6 +953,7 @@ memory usage: 19.2 KB
       <td>0</td>
       <td>1</td>
       <td>0</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>2</th>
@@ -944,6 +965,7 @@ memory usage: 19.2 KB
       <td>1</td>
       <td>0</td>
       <td>0</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>3</th>
@@ -955,22 +977,24 @@ memory usage: 19.2 KB
       <td>2</td>
       <td>1</td>
       <td>1</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>4</th>
       <td>2</td>
       <td>2</td>
       <td>5</td>
-      <td>4</td>
+      <td>5</td>
       <td>1</td>
       <td>1</td>
       <td>0</td>
       <td>0</td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-1c569a53-0947-427c-abeb-43e5406ea858')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-2714db75-c590-4200-be01-8b4b4aa7574e')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1021,12 +1045,12 @@ memory usage: 19.2 KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-1c569a53-0947-427c-abeb-43e5406ea858 button.colab-df-convert');
+          document.querySelector('#df-2714db75-c590-4200-be01-8b4b4aa7574e button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-1c569a53-0947-427c-abeb-43e5406ea858');
+          const element = document.querySelector('#df-2714db75-c590-4200-be01-8b4b4aa7574e');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1056,7 +1080,7 @@ memory usage: 19.2 KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-0e0217dd-5160-418c-ac00-4c6d93f903bf">
+  <div id="df-a5085bee-1033-4233-b36a-22f67cb5f038">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1084,6 +1108,7 @@ memory usage: 19.2 KB
       <th>deg-malig</th>
       <th>breast</th>
       <th>irradiat</th>
+      <th>Unnamed: 10</th>
     </tr>
   </thead>
   <tbody>
@@ -1097,6 +1122,7 @@ memory usage: 19.2 KB
       <td>2</td>
       <td>1</td>
       <td>0</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>1</th>
@@ -1108,6 +1134,7 @@ memory usage: 19.2 KB
       <td>0</td>
       <td>1</td>
       <td>0</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>2</th>
@@ -1119,6 +1146,7 @@ memory usage: 19.2 KB
       <td>1</td>
       <td>0</td>
       <td>0</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>3</th>
@@ -1130,22 +1158,24 @@ memory usage: 19.2 KB
       <td>2</td>
       <td>1</td>
       <td>1</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>4</th>
       <td>2</td>
       <td>2</td>
       <td>5</td>
-      <td>4</td>
+      <td>5</td>
       <td>1</td>
       <td>1</td>
       <td>0</td>
       <td>0</td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-0e0217dd-5160-418c-ac00-4c6d93f903bf')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-a5085bee-1033-4233-b36a-22f67cb5f038')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1196,12 +1226,12 @@ memory usage: 19.2 KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-0e0217dd-5160-418c-ac00-4c6d93f903bf button.colab-df-convert');
+          document.querySelector('#df-a5085bee-1033-4233-b36a-22f67cb5f038 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-0e0217dd-5160-418c-ac00-4c6d93f903bf');
+          const element = document.querySelector('#df-a5085bee-1033-4233-b36a-22f67cb5f038');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1251,14 +1281,58 @@ Name: class, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>prediksi : [0 0 0 1 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 1 1 0 1 1 0 1 0 0 0 0 0 1 0
- 0 0 1 0 1 0 0 1 0 0 1 0 0 0 1 1 0 0 0 0 1 0 0 1 0 0 0 1 0 1 1 0 1 1 0 0 0
- 0 1 0 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0 0 1 0
- 0 1 1 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1
- 1 0 0 0 1 0 0 1 1 0 0 1 1 0 0 0 0 0 1 0 0 1 0 0 1 0 0 1 0 1 0 0 0 0 0 0 0
- 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0
- 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 0 1 1 0 0 0 1 1 1
- 1 0 0 0 0 1 0 0 1 1 1 0 0]
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">ValueError</span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-9-4bda88a572c6&gt;</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">modelnb</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">nbtrain</span> <span class="o">=</span><span class="n">modelnb</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">Y_predict</span> <span class="o">=</span> <span class="n">nbtrain</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;prediksi :&quot;</span><span class="p">,</span> <span class="n">Y_predict</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/sklearn/naive_bayes.py</span> in <span class="ni">fit</span><span class="nt">(self, X, y, sample_weight)</span>
+<span class="g g-Whitespace">    </span><span class="mi">265</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_validate_params</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">266</span>         <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_validate_data</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">267</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_partial_fit</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">268</span>             <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">_refit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sample_weight</span><span class="o">=</span><span class="n">sample_weight</span>
+<span class="g g-Whitespace">    </span><span class="mi">269</span>         <span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/sklearn/naive_bayes.py</span> in <span class="ni">_partial_fit</span><span class="nt">(self, X, y, classes, _refit, sample_weight)</span>
+<span class="g g-Whitespace">    </span><span class="mi">426</span> 
+<span class="g g-Whitespace">    </span><span class="mi">427</span>         <span class="n">first_call</span> <span class="o">=</span> <span class="n">_check_partial_fit_first_call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">classes</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">428</span>         <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_validate_data</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">reset</span><span class="o">=</span><span class="n">first_call</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">429</span>         <span class="k">if</span> <span class="n">sample_weight</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">430</span>             <span class="n">sample_weight</span> <span class="o">=</span> <span class="n">_check_sample_weight</span><span class="p">(</span><span class="n">sample_weight</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/sklearn/base.py</span> in <span class="ni">_validate_data</span><span class="nt">(self, X, y, reset, validate_separately, **check_params)</span>
+<span class="g g-Whitespace">    </span><span class="mi">582</span>                 <span class="n">y</span> <span class="o">=</span> <span class="n">check_array</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">input_name</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">check_y_params</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">583</span>             <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">584</span>                 <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">check_X_y</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">**</span><span class="n">check_params</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">585</span>             <span class="n">out</span> <span class="o">=</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span>
+<span class="g g-Whitespace">    </span><span class="mi">586</span> 
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/sklearn/utils/validation.py</span> in <span class="ni">check_X_y</span><span class="nt">(X, y, accept_sparse, accept_large_sparse, dtype, order, copy, force_all_finite, ensure_2d, allow_nd, multi_output, ensure_min_samples, ensure_min_features, y_numeric, estimator)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1104</span>         <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1105</span> 
+<span class="ne">-&gt; </span><span class="mi">1106</span>     <span class="n">X</span> <span class="o">=</span> <span class="n">check_array</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1107</span>         <span class="n">X</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1108</span>         <span class="n">accept_sparse</span><span class="o">=</span><span class="n">accept_sparse</span><span class="p">,</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/sklearn/utils/validation.py</span> in <span class="ni">check_array</span><span class="nt">(array, accept_sparse, accept_large_sparse, dtype, order, copy, force_all_finite, ensure_2d, allow_nd, ensure_min_samples, ensure_min_features, estimator, input_name)</span>
+<span class="g g-Whitespace">    </span><span class="mi">919</span> 
+<span class="g g-Whitespace">    </span><span class="mi">920</span>         <span class="k">if</span> <span class="n">force_all_finite</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">921</span>             <span class="n">_assert_all_finite</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">922</span>                 <span class="n">array</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">923</span>                 <span class="n">input_name</span><span class="o">=</span><span class="n">input_name</span><span class="p">,</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/sklearn/utils/validation.py</span> in <span class="ni">_assert_all_finite</span><span class="nt">(X, allow_nan, msg_dtype, estimator_name, input_name)</span>
+<span class="g g-Whitespace">    </span><span class="mi">159</span>                 <span class="s2">&quot;#estimators-that-handle-nan-values&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">160</span>             <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">161</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg_err</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">162</span> 
+<span class="g g-Whitespace">    </span><span class="mi">163</span> 
+
+<span class="ne">ValueError</span>: Input X contains NaN.
+<span class="n">GaussianNB</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">accept</span> <span class="n">missing</span> <span class="n">values</span> <span class="n">encoded</span> <span class="k">as</span> <span class="n">NaN</span> <span class="n">natively</span><span class="o">.</span> <span class="n">For</span> <span class="n">supervised</span> <span class="n">learning</span><span class="p">,</span> <span class="n">you</span> <span class="n">might</span> <span class="n">want</span> <span class="n">to</span> <span class="n">consider</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">ensemble</span><span class="o">.</span><span class="n">HistGradientBoostingClassifier</span> <span class="ow">and</span> <span class="n">Regressor</span> <span class="n">which</span> <span class="n">accept</span> <span class="n">missing</span> <span class="n">values</span> <span class="n">encoded</span> <span class="k">as</span> <span class="n">NaNs</span> <span class="n">natively</span><span class="o">.</span> <span class="n">Alternatively</span><span class="p">,</span> <span class="n">it</span> <span class="ow">is</span> <span class="n">possible</span> <span class="n">to</span> <span class="n">preprocess</span> <span class="n">the</span> <span class="n">data</span><span class="p">,</span> <span class="k">for</span> <span class="n">instance</span> <span class="n">by</span> <span class="n">using</span> <span class="n">an</span> <span class="n">imputer</span> <span class="n">transformer</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">pipeline</span> <span class="ow">or</span> <span class="n">drop</span> <span class="n">samples</span> <span class="k">with</span> <span class="n">missing</span> <span class="n">values</span><span class="o">.</span> <span class="n">See</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">scikit</span><span class="o">-</span><span class="n">learn</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">stable</span><span class="o">/</span><span class="n">modules</span><span class="o">/</span><span class="n">impute</span><span class="o">.</span><span class="n">html</span> <span class="n">You</span> <span class="n">can</span> <span class="n">find</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">estimators</span> <span class="n">that</span> <span class="n">handle</span> <span class="n">NaN</span> <span class="n">values</span> <span class="n">at</span> <span class="n">the</span> <span class="n">following</span> <span class="n">page</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">scikit</span><span class="o">-</span><span class="n">learn</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">stable</span><span class="o">/</span><span class="n">modules</span><span class="o">/</span><span class="n">impute</span><span class="o">.</span><span class="n">html</span><span class="c1">#estimators-that-handle-nan-values</span>
 </pre></div>
 </div>
 </div>
@@ -1284,7 +1358,7 @@ Name: class, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a3c3d122-3942-4981-beb3-7f1169a142ca">
+  <div id="df-7cafe716-2ef0-45c6-b5fb-d9c2e952cc53">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1385,7 +1459,7 @@ Name: class, dtype: int64
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a3c3d122-3942-4981-beb3-7f1169a142ca')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-7cafe716-2ef0-45c6-b5fb-d9c2e952cc53')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1436,12 +1510,12 @@ Name: class, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-a3c3d122-3942-4981-beb3-7f1169a142ca button.colab-df-convert');
+          document.querySelector('#df-7cafe716-2ef0-45c6-b5fb-d9c2e952cc53 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a3c3d122-3942-4981-beb3-7f1169a142ca');
+          const element = document.querySelector('#df-7cafe716-2ef0-45c6-b5fb-d9c2e952cc53');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1487,7 +1561,7 @@ Name: class, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-fe43d8f0-032e-44f6-891e-abc1aec1c9ce">
+  <div id="df-6ae6b0df-4f39-4599-93e7-2d941e8bb5b3">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1588,7 +1662,7 @@ Name: class, dtype: int64
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-fe43d8f0-032e-44f6-891e-abc1aec1c9ce')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-6ae6b0df-4f39-4599-93e7-2d941e8bb5b3')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1639,12 +1713,12 @@ Name: class, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-fe43d8f0-032e-44f6-891e-abc1aec1c9ce button.colab-df-convert');
+          document.querySelector('#df-6ae6b0df-4f39-4599-93e7-2d941e8bb5b3 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-fe43d8f0-032e-44f6-891e-abc1aec1c9ce');
+          const element = document.querySelector('#df-6ae6b0df-4f39-4599-93e7-2d941e8bb5b3');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1910,7 +1984,7 @@ Name: class, dtype: int64
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;false-recurrence-events&#39;]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.10/dist-packages/sklearn/base.py:439: UserWarning: X does not have valid feature names, but KNeighborsClassifier was fitted with feature names
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.9/dist-packages/sklearn/base.py:439: UserWarning: X does not have valid feature names, but KNeighborsClassifier was fitted with feature names
   warnings.warn(
 </pre></div>
 </div>
@@ -1998,11 +2072,11 @@ false-recurrence-events       0.73      1.00      0.84        48
 Accuracy: 0.7272727272727273
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.10/dist-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.9/dist-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
   _warn_prf(average, modifier, msg_start, len(result))
-/usr/local/lib/python3.10/dist-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+/usr/local/lib/python3.9/dist-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
   _warn_prf(average, modifier, msg_start, len(result))
-/usr/local/lib/python3.10/dist-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+/usr/local/lib/python3.9/dist-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
   _warn_prf(average, modifier, msg_start, len(result))
 </pre></div>
 </div>

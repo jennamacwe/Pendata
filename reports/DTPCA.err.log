@@ -15,46 +15,95 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-df['species'].value_counts()
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
 ------------------
 
 
 [0;31m[0m
-[0;31mKeyError[0mTraceback (most recent call last)
-[0;32m/usr/local/lib/python3.10/dist-packages/pandas/core/indexes/base.py[0m in [0;36mget_loc[0;34m(self, key, method, tolerance)[0m
-[1;32m   3801[0m             [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 3802[0;31m                 [0;32mreturn[0m [0mself[0m[0;34m.[0m[0m_engine[0m[0;34m.[0m[0mget_loc[0m[0;34m([0m[0mcasted_key[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   3803[0m             [0;32mexcept[0m [0mKeyError[0m [0;32mas[0m [0merr[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;31mKeyboardInterrupt[0mTraceback (most recent call last)
+[0;32m<ipython-input-1-114b4bb00877>[0m in [0;36m<cell line: 1>[0;34m()[0m
+[0;32m----> 1[0;31m [0;32mimport[0m [0mpandas[0m [0;32mas[0m [0mpd[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      2[0m [0;32mimport[0m [0mnumpy[0m [0;32mas[0m [0mnp[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m [0;32mimport[0m [0mseaborn[0m [0;32mas[0m [0msns[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m [0;32mimport[0m [0mmatplotlib[0m[0;34m.[0m[0mpyplot[0m [0;32mas[0m [0mplt[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m/usr/local/lib/python3.10/dist-packages/pandas/_libs/index.pyx[0m in [0;36mpandas._libs.index.IndexEngine.get_loc[0;34m()[0m
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/__init__.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     20[0m [0;34m[0m[0m
+[1;32m     21[0m [0;31m# numpy compat[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 22[0;31m [0;32mfrom[0m [0mpandas[0m[0;34m.[0m[0mcompat[0m [0;32mimport[0m [0mis_numpy_dev[0m [0;32mas[0m [0m_is_numpy_dev[0m  [0;31m# pyright: ignore # noqa:F401[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     23[0m [0;34m[0m[0m
+[1;32m     24[0m [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m/usr/local/lib/python3.10/dist-packages/pandas/_libs/index.pyx[0m in [0;36mpandas._libs.index.IndexEngine.get_loc[0;34m()[0m
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/compat/__init__.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     16[0m [0;34m[0m[0m
+[1;32m     17[0m [0;32mfrom[0m [0mpandas[0m[0;34m.[0m[0m_typing[0m [0;32mimport[0m [0mF[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 18[0;31m from pandas.compat.numpy import (
+[0m[1;32m     19[0m     [0mis_numpy_dev[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     20[0m     [0mnp_version_under1p21[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32mpandas/_libs/hashtable_class_helper.pxi[0m in [0;36mpandas._libs.hashtable.PyObjectHashTable.get_item[0;34m()[0m
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/compat/numpy/__init__.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      2[0m [0;32mimport[0m [0mnumpy[0m [0;32mas[0m [0mnp[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m [0;34m[0m[0m
+[0;32m----> 4[0;31m [0;32mfrom[0m [0mpandas[0m[0;34m.[0m[0mutil[0m[0;34m.[0m[0mversion[0m [0;32mimport[0m [0mVersion[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      5[0m [0;34m[0m[0m
+[1;32m      6[0m [0;31m# numpy versioning[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32mpandas/_libs/hashtable_class_helper.pxi[0m in [0;36mpandas._libs.hashtable.PyObjectHashTable.get_item[0;34m()[0m
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/util/__init__.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0;31m# pyright: reportUnusedImport = false[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 2[0;31m from pandas.util._decorators import (  # noqa:F401
+[0m[1;32m      3[0m     [0mAppender[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m     [0mSubstitution[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m     [0mcache_readonly[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
 
-[0;31mKeyError[0m: 'species'
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/util/_decorators.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     12[0m [0;32mimport[0m [0mwarnings[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     13[0m [0;34m[0m[0m
+[0;32m---> 14[0;31m [0;32mfrom[0m [0mpandas[0m[0;34m.[0m[0m_libs[0m[0;34m.[0m[0mproperties[0m [0;32mimport[0m [0mcache_readonly[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     15[0m from pandas._typing import (
+[1;32m     16[0m     [0mF[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
 
-The above exception was the direct cause of the following exception:
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/_libs/__init__.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     11[0m [0;34m[0m[0m
+[1;32m     12[0m [0;34m[0m[0m
+[0;32m---> 13[0;31m [0;32mfrom[0m [0mpandas[0m[0;34m.[0m[0m_libs[0m[0;34m.[0m[0minterval[0m [0;32mimport[0m [0mInterval[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     14[0m from pandas._libs.tslibs import (
+[1;32m     15[0m     [0mNaT[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
 
-[0;31mKeyError[0mTraceback (most recent call last)
-[0;32m<ipython-input-26-1a8c322653e2>[0m in [0;36m<cell line: 1>[0;34m()[0m
-[0;32m----> 1[0;31m [0mdf[0m[0;34m[[0m[0;34m'species'[0m[0;34m][0m[0;34m.[0m[0mvalue_counts[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m
-[0;32m/usr/local/lib/python3.10/dist-packages/pandas/core/frame.py[0m in [0;36m__getitem__[0;34m(self, key)[0m
-[1;32m   3805[0m             [0;32mif[0m [0mself[0m[0;34m.[0m[0mcolumns[0m[0;34m.[0m[0mnlevels[0m [0;34m>[0m [0;36m1[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   3806[0m                 [0;32mreturn[0m [0mself[0m[0;34m.[0m[0m_getitem_multilevel[0m[0;34m([0m[0mkey[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 3807[0;31m             [0mindexer[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mcolumns[0m[0;34m.[0m[0mget_loc[0m[0;34m([0m[0mkey[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   3808[0m             [0;32mif[0m [0mis_integer[0m[0;34m([0m[0mindexer[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   3809[0m                 [0mindexer[0m [0;34m=[0m [0;34m[[0m[0mindexer[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/_libs/interval.pyx[0m in [0;36minit pandas._libs.interval[0;34m()[0m
 
-[0;32m/usr/local/lib/python3.10/dist-packages/pandas/core/indexes/base.py[0m in [0;36mget_loc[0;34m(self, key, method, tolerance)[0m
-[1;32m   3802[0m                 [0;32mreturn[0m [0mself[0m[0;34m.[0m[0m_engine[0m[0;34m.[0m[0mget_loc[0m[0;34m([0m[0mcasted_key[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   3803[0m             [0;32mexcept[0m [0mKeyError[0m [0;32mas[0m [0merr[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 3804[0;31m                 [0;32mraise[0m [0mKeyError[0m[0;34m([0m[0mkey[0m[0;34m)[0m [0;32mfrom[0m [0merr[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   3805[0m             [0;32mexcept[0m [0mTypeError[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   3806[0m                 [0;31m# If we have a listlike key, _check_indexing_error will raise[0m[0;34m[0m[0;34m[0m[0m
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/_libs/hashtable.pyx[0m in [0;36minit pandas._libs.hashtable[0;34m()[0m
 
-[0;31mKeyError[0m: 'species'
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/_libs/missing.pyx[0m in [0;36minit pandas._libs.missing[0;34m()[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/__init__.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     35[0m [0;34m[0m[0m
+[1;32m     36[0m [0;32mfrom[0m [0mpandas[0m[0;34m.[0m[0m_libs[0m[0;34m.[0m[0mtslibs[0m [0;32mimport[0m [0mdtypes[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 37[0;31m [0;32mfrom[0m [0mpandas[0m[0;34m.[0m[0m_libs[0m[0;34m.[0m[0mtslibs[0m[0;34m.[0m[0mconversion[0m [0;32mimport[0m [0mlocalize_pydatetime[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     38[0m from pandas._libs.tslibs.dtypes import (
+[1;32m     39[0m     [0mResolution[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/conversion.pyx[0m in [0;36minit pandas._libs.tslibs.conversion[0;34m()[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/tzconversion.pyx[0m in [0;36minit pandas._libs.tslibs.tzconversion[0;34m()[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/timezones.pyx[0m in [0;36minit pandas._libs.tslibs.timezones[0;34m()[0m
+
+[0;32m/usr/lib/python3.10/importlib/_bootstrap.py[0m in [0;36m_find_and_load[0;34m(name, import_)[0m
+
+[0;32m/usr/lib/python3.10/importlib/_bootstrap.py[0m in [0;36m_find_and_load_unlocked[0;34m(name, import_)[0m
+
+[0;32m/usr/lib/python3.10/importlib/_bootstrap.py[0m in [0;36m_find_spec[0;34m(name, path, target)[0m
+
+[0;32m/usr/lib/python3.10/importlib/_bootstrap_external.py[0m in [0;36mfind_spec[0;34m(cls, fullname, path, target)[0m
+
+[0;32m/usr/lib/python3.10/importlib/_bootstrap_external.py[0m in [0;36m_get_spec[0;34m(cls, fullname, path, target)[0m
+
+[0;32m/usr/lib/python3.10/importlib/_bootstrap_external.py[0m in [0;36mfind_spec[0;34m(self, fullname, target)[0m
+
+[0;32m/usr/lib/python3.10/importlib/_bootstrap_external.py[0m in [0;36m_path_stat[0;34m(path)[0m
+
+[0;31mKeyboardInterrupt[0m: 
 
